@@ -14,7 +14,7 @@ client.on("ready", () => {
 })
 
 client.on("messageCreate", (message) => {
-    if (message.content == "Hi!") {
+    if (message.content == "Hi!" && message.channel == process.env.INTERACT) {
         message.reply("Hey! How are you?")
     }
 })
