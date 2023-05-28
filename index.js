@@ -19,4 +19,8 @@ client.on("messageCreate", (message) => {
     }
 })
 
+client.on("guildMemberAdd", (member) => {
+    member.guild.channels.cache.get(process.env.WELCOME).send(`Hello, <@${member.id}>, welcome to poggers place. We hope you enjoy your stay!`);
+})
+
 client.login(process.env.TOKEN)
