@@ -13,8 +13,14 @@ client.on("ready", () => {
     console.log(`Successfully logged in as ${client.user.tag}!`)
 })
 
+const restricted_interaction_guilds = [984162831656181920]
+const can_interact = {
+    "984162831656181920": ["984162833833013261"]
+}
+
 client.on("messageCreate", (message) => {
-    if (message.content == "Hi!" && message.channel == process.env.INTERACT) {
+    let willRespond = (restricted_interaction_guilds.includes(message.guild) && can_interact[message.guild.toString()].includes(message.channel)) || !(restricted_interaction_guilds.includes(message.guild))
+    if (message.content == "Hi!" && willRespond) {
         message.reply("Hey! How are you?")
     }
 })
