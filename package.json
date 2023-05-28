@@ -1,0 +1,23 @@
+{
+  "name": "fragrance",
+  "version": "1.0.0",
+  "description": "Fragrance, a Discord bot for small communities with automatic OTDs, movie nights, etc.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BinaryCrown/Fragrance.git"
+  },
+  "author": "Jayde M. and Jack O.C.",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BinaryCrown/Fragrance/issues"
+  },
+  "homepage": "https://github.com/BinaryCrown/Fragrance#readme",
+  "dependencies": {
+    "discord.js": "^14.11.0",
+    "dotenv": "^16.0.3"
+  }
+}
