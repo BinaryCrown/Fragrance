@@ -21,7 +21,6 @@ const can_interact = {
 client.on("messageCreate", (message) => {
     let willRespond = (restricted_interaction_guilds.includes(message.guild.id) && can_interact[message.guild.id].includes(message.channel.id)) || !(restricted_interaction_guilds.includes(message.guild.id))
     if (message.content == "Hi!" && willRespond) {
-        console.log(message.channel);
         message.reply("Hey! How are you?")
     }
 })
